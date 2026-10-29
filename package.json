@@ -21,10 +21,12 @@
     "@types/react-datepicker": "^4.3.4",
     "@types/react-dom": "^16.9.8",
     "@types/uuid": "^8.3.4",
+    "dotenv": "^8.2.0",
     "faker": "^5.5.3",
     "json-server": "^0.16.1",
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
+    "node-fetch": "^3.3.2",
     "react": "^17.0.1",
     "react-datepicker": "^4.6.0",
     "react-dom": "^17.0.1",
@@ -35,10 +37,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "node api.js && react-scripts start",
-    "run-server": "json-server --watch db.json --port 3004",
-    "run-server-big": "json-server --watch dbBig.json --port 3004",
-    "build": "node api.js && react-scripts build",
+    "start": "node init && react-scripts start",
+    "run-server": "node init && json-server --watch db.json --port 3004",
+    "run-server-big": "node init && json-server --watch dbBig.json --port 3004",
+    "build": "node init && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
